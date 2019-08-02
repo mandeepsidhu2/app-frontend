@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="mx-auto order-0">
+        <a class="navbar-brand mx-auto" href="#">Coding Jacks</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        
+        <ul class="navbar-nav mr-auto ml-5">
+            <li  class="nav-item active dropdown" >
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Courses</a>
+                <div  class="dropdown-menu" >
+                <a  class="dropdown-item" [routerLink]="'/dashboard'"> C++ Basics </a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'/dashboard'">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'/dashboard'">Lectures</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'/dashboard'">About Us</a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Google Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Facebook Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
