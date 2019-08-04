@@ -1,0 +1,16 @@
+footer  {
+background: linear-gradient(to right, #9966ff 0%, #9999ff 100%);
+margin-top: 5%;
+}
+footer p{
+    color: whitesmoke;
+}
+i{
+    color: white
+}
+.footer-copyright{
+    color: white
+}
+.footer-copyright a{
+    color: white
+}

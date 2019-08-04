@@ -1,6 +1,6 @@
 .well{
     margin-top: 10%;
 }
-.mat-typography p{
+.mat-typography p , #carouselControls{
     margin-top: 10%;
 }
