@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md navbar-default shadow-sm p-3 mb-5 bg-white rounded ">
     <div class="mx-auto order-0">
-        <a class="navbar-brand mx-auto" href="#">Coding Jacks</a>
+        <a style="color: black" class="navbar-brand mx-auto" href="#">Coding Jacks</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -9,7 +9,7 @@
         
         <ul class="navbar-nav mr-auto ml-5">
             <li  class="nav-item active dropdown" >
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Courses</a>
+                <a style="color: #167af6" class="nav-link dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Courses</a>
                 <div  class="dropdown-menu" >
                 <a  class="dropdown-item" [routerLink]="'/dashboard'"> C++ Basics </a>
                 </div>
@@ -26,10 +26,11 @@
         </ul>
     </div>
     
-    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <i class="fa fa-google" aria-hidden="true"> Login</i> 
+    <div *ngIf=!loggedin class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        
+        <ul  class="navbar-nav ml-auto">
+            <li  class="nav-item">
+                <a><i class="fa fa-google fa-lg"(click)="socialSignIn('google')" aria-hidden="true"> Login</i> </a>
             </li> 
             &nbsp;
             <li style="margin-left: 1px">
@@ -37,8 +38,15 @@
             </li> 
             &nbsp;
             <li class="nav-item">
-                <i class="fa fa-facebook" aria-hidden="true"> Login</i> 
+                <a><i class="fa fa-facebook fa-lg" aria-hidden="true"> Login</i></a>
             </li>
         </ul>
     </div>
+    <div  *ngIf=loggedin class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul  class="navbar-nav ml-auto">
+                    <li  class="nav-item">
+                            <button type="button" (click)="logout()" class="btn btn-outline-danger">Logout</button>                
+                    </li> 
+             </ul>
+  </div>
 </nav>
