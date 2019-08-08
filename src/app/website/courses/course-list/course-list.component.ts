@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CourseListComponent implements OnInit {
 
   constructor() { }
-
+  courses:any=[1,2,3];
   ngOnInit() {
   }
 
