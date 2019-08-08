@@ -27,8 +27,10 @@ export function getAuthServiceConfigs() {
     CommonModule,
     WebsiteRoutingModule,
     AngularFontAwesomeModule,
-    SocialLoginModule
+    SocialLoginModule,
+    
   ],
+  exports:[NavbarComponent],
   providers:[
     {
       provide: AuthServiceConfig,

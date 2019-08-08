@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md navbar-default shadow-sm p-3 mb-5 bg-white rounded ">
     <div class="mx-auto order-0">
-        <a style="color: black" class="navbar-brand mx-auto" href="#">Coding Jacks</a>
+        <a style="color: black" class="navbar-brand mx-auto" [routerLink]="'/dashboard'">Coding Jacks</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,3 +50,4 @@
              </ul>
   </div>
 </nav>
+<router-outlet></router-outlet>
