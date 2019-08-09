@@ -27,7 +27,6 @@ export class NavbarComponent implements OnInit {
     
     this.socialAuthService.signIn(socialPlatformProvider).then(
       (userData) => {
-        console.log(socialPlatform+" sign in data : " , userData);
         this.authenticationService.login(userData.idToken).subscribe(data=>{
           this.loggedin=true
         });
