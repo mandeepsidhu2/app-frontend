@@ -1,18 +1,17 @@
 
-<div class="container" *ngIf="currentPath == '/courses/module'">
+<div class="container" *ngIf="currentPath != '/courses/module/'">
     <div  class="row row-centered pos d-flex justify-content-around">
         <div *ngFor="let element of elements"  class="col-lg-3 col-xs-12 shadow p-3 mb-5 bg-white rounded">
-            <div class="well" routerLink="lecture" (click)="changePathToLecture()" >
-                <a > try</a>
+            <div class="well" routerLink="lecture" (click)="changePathToLecture(element.id)" >
                 <section class="mat-typography">
-                    <h3>Into to C++</h3>
+                    <h3>{{element.title}}</h3>
                 </section>  
-                <ul>
-                    <li>Data types</li>
-                    <li>Data usage</li>
+                <ul *ngFor="let description of element.description">
+                    <li>{{description}}</li>
                 </ul>
             </div>
         </div>
+        
     </div>
 </div>
         

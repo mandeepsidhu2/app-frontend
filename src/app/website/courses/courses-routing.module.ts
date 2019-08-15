@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   
   {
-    path: 'module',
+    path: 'module/:id',
     component: CourseElementsComponent
   ,
   children: [
