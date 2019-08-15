@@ -12,17 +12,17 @@ export class CourseElementsComponent implements OnInit {
   constructor(public router: Router,public courseElementsService:CourseElementsService,private route: ActivatedRoute) { }
   elements:any;
   currentPath:string
-  id:string
+  courseId:string
   view:string
   ngOnInit() {
     if(!this.router.routerState.snapshot.url.includes('lecture'))
     this.view='course-elements'
     else
     this.view='lecture'
-    
+
     this.currentPath=this.router.url;
-    this.route.params.subscribe(data=>this.id=data.id)
-    this.courseElementsService.getCourseElements(this.id).subscribe(data=>{
+    this.route.params.subscribe(data=>this.courseId=data.id)
+    this.courseElementsService.getCourseElements(this.courseId).subscribe(data=>{
       this.elements=data;});
   }
   

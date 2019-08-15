@@ -2,7 +2,7 @@
 <div class="container" *ngIf="view == 'course-elements'">
     <div  class="row row-centered pos d-flex justify-content-around">
         <div *ngFor="let element of elements"  class="col-lg-3 col-xs-12 shadow p-3 mb-5 bg-white rounded">
-            <div class="well" [routerLink]="['lecture',{id:element.id}]" (click)="changePathToLecture(element.id)" >
+            <div class="well" [routerLink]="['lecture',{elementId:element.id}]" (click)="changePathToLecture(element.id)" >
                 <section class="mat-typography">
                     <h3>{{element.title}}</h3>
                 </section>  

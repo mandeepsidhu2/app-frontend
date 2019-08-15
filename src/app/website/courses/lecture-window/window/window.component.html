@@ -4,47 +4,16 @@
     <div class="col-lg-8 col-xs-12 shadow bg-white rounded " >
         <div class="well" >
                 <iframe width="730" height="580"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1">
+                [attr.src]="selected_video">
                 </iframe> 
         </div>
     </div>
 
     <div  id="scrollable" class="col-lg-4 col-xs-12 shadow bg-white rounded">
-        <div style="padding:0px; margin-top: 2vh; height:10vh" class="container-fluid  col-lg-12 col-xs-12 border-bottom">
-                <p >rum et Malorum" (The Extremes of Good and Evil) by Cicero</p>
+        <div *ngFor="let lecture of lectures" style="padding:0px; margin-top: 2vh; height:10vh" class="container-fluid  col-lg-12 col-xs-12 border-bottom">
+                <p (click)="selectVideo(lecture.video_link)">{{lecture.title}}</p>
         </div>
-        <div style="padding:0px; margin-top: 2vh; height:10vh" class="container-fluid  col-lg-12 col-xs-12 border-bottom">
-                <p >rum et Malorum" (The Extremes of Good and Evil) by Cicero</p>
-        </div>
-        <div style="padding:0px; margin-top: 2vh; height:10vh" class="container-fluid  col-lg-12 col-xs-12 border-bottom">
-                <p >rum et Malorum" (The Extremes of Good and Evil) by Cicero</p>
-        </div>
-        <div style="padding:0px; margin-top: 2vh; height:10vh" class="container-fluid  col-lg-12 col-xs-12 border-bottom">
-                <p >rum et Malorum" (The Extremes of Good and Evil) by Cicero</p>
-        </div>
-        <div style="padding:0px; margin-top: 2vh; height:10vh" class="container-fluid  col-lg-12 col-xs-12 border-bottom">
-                <p >rum et Malorum" (The Extremes of Good and Evil) by Cicero</p>
-        </div>
-        <div style="padding:0px; margin-top: 2vh; height:10vh" class="container-fluid  col-lg-12 col-xs-12 border-bottom">
-                <p >rum et Malorum" (The Extremes of Good and Evil) by Cicero</p>
-        </div>
-        <div style="padding:0px; margin-top: 2vh; height:10vh" class="container-fluid  col-lg-12 col-xs-12 border-bottom">
-                <p >rum et Malorum" (The Extremes of Good and Evil) by Cicero</p>
-        </div>
-        <div style="padding:0px; margin-top: 2vh; height:10vh" class="container-fluid  col-lg-12 col-xs-12 border-bottom">
-                <p >rum et Malorum" (The Extremes of Good and Evil) by Cicero</p>
-        </div>
-        <div style="padding:0px; margin-top: 2vh; height:10vh" class="container-fluid  col-lg-12 col-xs-12 border-bottom">
-                <p >rum et Malorum" (The Extremes of Good and Evil) by Cicero</p>
-        </div>
-        <div style="padding:0px; margin-top: 2vh; height:10vh" class="container-fluid  col-lg-12 col-xs-12 border-bottom">
-                <p >rum et Malorum" (The Extremes of Good and Evil) by Cicero</p>
-        </div>
-        <div style="padding:0px; margin-top: 2vh; height:10vh" class="container-fluid  col-lg-12 col-xs-12 border-bottom">
-                <p >rum et Malorum" (The Extremes of Good and Evil) by Cicero</p>
-        </div><div style="padding:0px; margin-top: 2vh; height:10vh" class="container-fluid  col-lg-12 col-xs-12 border-bottom">
-                <p >rum et Malorum" (The Extremes of Good and Evil) by Cicero</p>
-        </div>
+       
     </div>
     
 </div>
