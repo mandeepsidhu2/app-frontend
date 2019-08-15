@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Routes,ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-window',
@@ -7,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WindowComponent implements OnInit {
 
-  constructor() { }
+  constructor(private activatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
-    console.log("ya ya")
+    this.activatedRoute.params.subscribe(params => {
+      let id = params['id']
+    
+      console.log(id);
+      });
   }
 
 }
