@@ -2,7 +2,7 @@
 <div class="container">
     <div  class="row row-centered pos d-flex justify-content-around">
         <div *ngFor="let course of courses"  class="col-lg-5 col-xs-12 shadow p-3 mb-5 bg-white rounded">
-            <div class="well">
+            <div class="well" (click)="selectedCourse(course)" routerLink='/courses/module'>
                 <section class="mat-typography">
                     <img class="d-block w-100 rounded" src="../../../../assets/images/{{course.image}}" alt="First slide">
                     <h2>{{course.title}}</h2>

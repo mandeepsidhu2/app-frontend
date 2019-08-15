@@ -16,5 +16,7 @@ export class CourseListComponent implements OnInit {
       console.log(this.courses);});
   
   }
-
+  selectedCourse(course:any){
+    console.log(course)
+  }
 }

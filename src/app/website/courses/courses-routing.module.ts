@@ -7,11 +7,18 @@ const routes: Routes = [
     path: '',
     component: CourseListComponent
   },
+  
   {
     path: 'module',
     component: CourseElementsComponent
-  },
-];
+  ,
+  children: [
+  {
+  path: 'lecture',
+  loadChildren: './lecture-window/lecture-window.module#LectureWindowModule'
+  
+  }
+]}];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

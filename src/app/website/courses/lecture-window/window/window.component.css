@@ -1,0 +1,7 @@
+.container-fluid{
+    height: 90vh;
+}
+#scrollable{
+    height: 90vh;
+    overflow:auto;
+}
