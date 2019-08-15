@@ -13,8 +13,9 @@ export class CourseElementsComponent implements OnInit {
   elements:any;
   currentPath:string
   id:string
+  view:string
   ngOnInit() {
-    
+    this.view='course-elements'
     this.currentPath=this.router.url;
     this.route.params.subscribe(data=>this.id=data.id)
     this.courseElementsService.getCourseElements(this.id).subscribe(data=>{
@@ -22,6 +23,7 @@ export class CourseElementsComponent implements OnInit {
   }
   
   changePathToLecture(id:any){
+    this.view='lecture'
     console.log(id)
     this.currentPath='/courses/module/'+id+'/lecture';
     console.log(this.currentPath)
