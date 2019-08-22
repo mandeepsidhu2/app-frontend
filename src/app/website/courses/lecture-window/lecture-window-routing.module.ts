@@ -5,7 +5,7 @@ import {WindowComponent} from './window/window.component'
 const routes: Routes = [
   {
     path: '',
-    component: WindowComponent
+    component: WindowComponent,
   },
 ];
 

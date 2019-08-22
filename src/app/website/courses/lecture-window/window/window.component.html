@@ -1,11 +1,44 @@
 
 <div class="container-fluid row row-centered pos">
      
-    <div class="col-lg-8 col-xs-12 shadow bg-white rounded " >
-        <div class="well" >
-                <iframe width="730" height="580"
-                [attr.src]="selected_video">
-                </iframe> 
+    <div id="container"class="col-lg-8 col-xs-12 shadow bg-white rounded " >
+        <div id="content" class="well" >
+            <iframe *ngIf="view=='video'" width="730" height="580"
+            [attr.src]="selected_video">
+            </iframe> 
+            <div *ngIf="view=='problem'">
+                <h2>{{selected_problem.heading}}</h2>
+                <p>{{selected_problem.statement}}</p>
+                <h5>Input Format</h5>
+                <span *ngFor="let input of selected_problem.input_format">
+                    <p>{{input}}</p>
+                </span>
+                <h5>Output Format</h5>
+                <span *ngFor="let output of selected_problem.output_format">
+                    <p>{{output}}</p>
+                </span>
+                <span *ngIf="selected_problem.constraints.length!=0">
+                <h5>Constraints</h5>
+                <span *ngFor="let constraint of selected_problem.constraints">
+                    <p>{{constraint}}</p>
+                </span>
+                </span>
+                <h5>Sample Test Cases</h5>
+                <div *ngFor="let sample_test_case of selected_problem.sample_test_cases;let i=index">
+                        <p>Sample Case {{i+1}}</p>
+                        <p>Input</p>
+                        <span *ngFor="let input of sample_test_case.input">
+                                <p>{{input}}</p>
+                        </span>
+                        
+                        <p>Output</p>
+                        <span *ngFor="let output of sample_test_case.output">
+                                <p>{{output}}</p>
+                        </span>
+
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -13,6 +46,9 @@
         <div *ngFor="let lecture of lectures" style="padding:0px; margin-top: 2vh; height:10vh" class="container-fluid  col-lg-12 col-xs-12 border-bottom">
                 <p (click)="selectVideo(lecture.video_link)">{{lecture.title}}</p>
         </div>
+        <div *ngFor="let problem of problems" style="padding:0px; margin-top: 2vh; height:10vh" class="container-fluid  col-lg-12 col-xs-12 border-bottom">
+            <p (click)="selectProblem(problem)">{{problem.heading}}</p>
+    </div>
        
     </div>
     
