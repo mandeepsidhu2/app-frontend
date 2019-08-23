@@ -18,6 +18,7 @@ export class WindowComponent implements OnInit {
   view='video'
   selected_video:SafeResourceUrl=null;
   ngOnInit() {
+    
     this.activatedRoute.params.subscribe(params => {
       let elementId = params['elementId']
       this.lectureService.getLectures(elementId).subscribe(data=>{
